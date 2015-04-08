@@ -1,27 +1,36 @@
-<div class="platillos form">
-<?php echo $this->Form->create('Platillo'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Platillo'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('nombre');
-		echo $this->Form->input('descripcion');
-		echo $this->Form->input('precio');
-		echo $this->Form->input('categoria_platillo_id');
-		echo $this->Form->input('Cocinero');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <?php echo $this->Form->create('Platillo'); ?>
+                <fieldset>
+                    <legend><?php echo __('Edit Platillo'); ?></legend>
+                <?php
+                    echo $this->Form->input('id');
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Platillo.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Platillo.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Platillos'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Categoria Platillos'), array('controller' => 'categoria_platillos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Categoria Platillo'), array('controller' => 'categoria_platillos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Cocineros'), array('controller' => 'cocineros', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cocinero'), array('controller' => 'cocineros', 'action' => 'add')); ?> </li>
-	</ul>
+                    echo '<div class="form-group">';
+                        echo $this->Form->input('nombre', array('class' => 'form-control', 'label' => 'DNI'));
+                    echo '</div>';
+
+                    echo '<div class="form-group">';
+                        echo $this->Form->input('descripcion', array('class' => 'form-control', 'label' => 'DNI'));
+                    echo '</div>';
+
+                    echo '<div class="form-group">';
+                        echo $this->Form->input('precio', array('class' => 'form-control', 'label' => 'DNI'));
+                    echo '</div>';
+
+                    echo '<div class="form-group">';
+                        echo $this->Form->input('categoria_platillo_id', array('class' => 'form-control', 'label' => 'DNI'));
+                    echo '</div>';
+
+                    echo '<div class="form-group">';                
+                        echo $this->Form->input('Cocinero', array('class' => 'form-control', 'label' => 'DNI'));
+                    echo '</div>';
+                
+                ?>
+                </fieldset>
+            <br/>
+            <?php echo $this->Form->end(array('label' => 'Editar Mesero', 'class' =>'btn btn-success')); ?>
+        </div>
+    </div>
 </div>

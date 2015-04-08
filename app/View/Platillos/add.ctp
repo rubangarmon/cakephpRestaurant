@@ -1,11 +1,13 @@
 <div class="platillos form">
-<?php echo $this->Form->create('Platillo'); ?>
+<?php echo $this->Form->create('Platillo', array('type' => 'file', 'novalidate' => 'novalidate')); ?>
 	<fieldset>
 		<legend><?php echo __('Add Platillo'); ?></legend>
 	<?php
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('descripcion');
 		echo $this->Form->input('precio');
+        echo $this->Form->input('foto', array('type' => 'file', 'label' => 'Foto'));
+        echo $this->Form->input('foto_dir', array('type' => 'hidden'));
 		echo $this->Form->input('categoria_platillo_id');
 		echo $this->Form->input('Cocinero');
 	?>

@@ -1,6 +1,6 @@
-<div class="cocineros index">
+
 	<h2><?php echo __('Cocineros'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<table class="table table-striped">
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -20,9 +20,9 @@
 		<td><?php echo h($cocinero['Cocinero']['created']); ?>&nbsp;</td>
 		<td><?php echo h($cocinero['Cocinero']['modified']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $cocinero['Cocinero']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cocinero['Cocinero']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cocinero['Cocinero']['id']), array(), __('Are you sure you want to delete # %s?', $cocinero['Cocinero']['id'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $cocinero['Cocinero']['id']), array('class' => 'btn btn-sm btn-primary')); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cocinero['Cocinero']['id']),array('class' => 'btn btn-sm btn-primary')); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cocinero['Cocinero']['id']), array('class' => 'btn btn-sm btn-primary'), __('Are you sure you want to delete # %s?', $cocinero['Cocinero']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -49,4 +49,3 @@
 		<li><?php echo $this->Html->link(__('List Platillos'), array('controller' => 'platillos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Platillo'), array('controller' => 'platillos', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
