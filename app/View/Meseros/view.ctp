@@ -1,4 +1,6 @@
-<div class="meseros view">
+<br/>
+<br/>
+<div class="well">
 <h2><?php echo __('Mesero'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
@@ -38,21 +40,12 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Mesero'), array('action' => 'edit', $mesero['Mesero']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Mesero'), array('action' => 'delete', $mesero['Mesero']['id']), array(), __('Are you sure you want to delete # %s?', $mesero['Mesero']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Meseros'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Mesero'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Mesas'), array('controller' => 'mesas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Mesa'), array('controller' => 'mesas', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+
 <div class="related">
 	<h3><?php echo __('Related Mesas'); ?></h3>
 	<?php if (!empty($mesero['Mesa'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
+    <div class="col-md-12">
+	<table class="table table-striped">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Serie'); ?></th>
@@ -80,11 +73,7 @@
 		</tr>
 	<?php endforeach; ?>
 	</table>
+</div>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Mesa'), array('controller' => 'mesas', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>

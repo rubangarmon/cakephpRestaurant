@@ -39,8 +39,8 @@
                 <li><?php echo $this->Html->link('Nuevo platillo', array('controller' => 'platillos', 'action' => 'add')); ?></li>
                 <li class="divider"></li>
                   <li class="dropdown-header">Categorías</li>
-                <li><?php echo $this->Html->link('Lista de categorías', array('controller' => 'categorias', 'action' => 'index')); ?></li>
-                <li><?php echo $this->Html->link('Nuevo categorías', array('controller' => 'categorias', 'action' => 'add')); ?></li>                  
+                <li><?php echo $this->Html->link('Lista de categorías', array('controller' => 'categoriaPlatillos', 'action' => 'index')); ?></li>
+                <li><?php echo $this->Html->link('Nuevo categorías', array('controller' => 'categoriaPlatillos', 'action' => 'add')); ?></li>                  
               </ul>
             </li>                
               
